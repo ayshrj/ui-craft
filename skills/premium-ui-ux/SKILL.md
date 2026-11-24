@@ -12,7 +12,7 @@ This skill is **actionable guidance for design review and implementation**, not 
 ## Canonical reference
 
 - Read [the complete Premium UI/UX Craft Playbook](references/premium-ui-ux-craft-playbook.md) **selectively**, using the topic map below.
-- The source document is preserved in the repository root as `premium_ui_ux_craft_playbook.md`. The bundled reference intentionally contains the **same full text**, making this skill self-contained if copied to another repository.
+- The source document is preserved in the repository root as `premium_ui_ux_craft_playbook.md` for maintainers. The bundled reference intentionally contains the **same full text**, making this skill self-contained if copied to another repository.
 - Treat timings, sizes, easing curves, and scoring weights in the playbook as **heuristics**, not universal platform standards. Follow explicit accessibility requirements and product constraints instead.
 - Prefer platform-native behavior over custom gesture or focus machinery when native behavior already satisfies the contract.
 
@@ -79,27 +79,27 @@ Do not mask functional defects with visual treatments.
 
 | For this problem | Read these playbook sections |
 | --- | --- |
-| Layout, typography, tokens, color, icons | Parts I–II; ``5–8 and `72 |
-| Safe triangles, pointer corridors, hover intent | Part III; ``9.1–9.6, `74, Recipe A |
-| Buttons, controls, selected/disabled/focus states | Part IV; ``10–14 |
-| Dropdowns, nested menus, command palette, context menus | Part V; ``15–18 |
-| Modal, popover, hovercard, sheet, toast | Part VI; ``19–22 |
-| Forms, input composition, validation, autosave, undo | Part VII; ``23–29 |
-| Search, filtering, sorting, tables, dashboards | Part VIII; ``30–33 |
-| Scroll, gesture arbitration, drag and drop, canvas | Part IX; ``34–37 |
-| Animations, interruptibility, easing, haptics | Part X; ``38–44 |
-| Async reliability, optimistic UI, perceived speed | Part XI; ``45–50 |
-| Responsive, safe areas, multi-input, localization | Part XII; ``51–54 |
-| Keyboard, screen reader, focus, reduced motion | Part XIII; ``55–59 |
-| Copy, onboarding, empty states, discoverability | Part XIV; ``60–64 |
-| Sensitive actions, payments, account, permissions | Part XV; ``65–68 |
-| Media viewers, creative editors, games | Part XVI; ``69–71 |
-| Tokens, component contracts, state machines, overlays | Part XVII; ``72–78 |
-| Hysteresis, changing input modality, timing races | Part XVIII; ``79–88 |
+| Layout, typography, tokens, color, icons | Parts I–II; §§5–8 and §72 |
+| Safe triangles, pointer corridors, hover intent | Part III; §§9.1–9.6, §74, Recipe A |
+| Buttons, controls, selected/disabled/focus states | Part IV; §§10–14 |
+| Dropdowns, nested menus, command palette, context menus | Part V; §§15–18 |
+| Modal, popover, hovercard, sheet, toast | Part VI; §§19–22 |
+| Forms, input composition, validation, autosave, undo | Part VII; §§23–29 |
+| Search, filtering, sorting, tables, dashboards | Part VIII; §§30–33 |
+| Scroll, gesture arbitration, drag and drop, canvas | Part IX; §§34–37 |
+| Animations, interruptibility, easing, haptics | Part X; §§38–44 |
+| Async reliability, optimistic UI, perceived speed | Part XI; §§45–50 |
+| Responsive, safe areas, multi-input, localization | Part XII; §§51–54 |
+| Keyboard, screen reader, focus, reduced motion | Part XIII; §§55–59 |
+| Copy, onboarding, empty states, discoverability | Part XIV; §§60–64 |
+| Sensitive actions, payments, account, permissions | Part XV; §§65–68 |
+| Media viewers, creative editors, games | Part XVI; §§69–71 |
+| Tokens, component contracts, state machines, overlays | Part XVII; §§72–78 |
+| Hysteresis, changing input modality, timing races | Part XVIII; §§79–88 |
 | Ready-made component interaction recipes | Part XIX; Recipes A–L |
 | Common failure modes | Part XX (anti-patterns) |
 | Ready-to-copy acceptance checklists | Part XXI |
-| Scoring, QA matrix, test examples, finishing passes | Part XXII; ``89–94 |
+| Scoring, QA matrix, test examples, finishing passes | Part XXII; §§89–94 |
 
 ## Non-negotiable interaction contracts
 
@@ -107,7 +107,7 @@ Do not mask functional defects with visual treatments.
 
 - Differentiate **hover**, **pressed**, **focused**, **selected**, **expanded**, and **disabled** states. These are not interchangeable.
 - Make interactive hit areas forgiving without making neighboring controls accidentally overlap or capture input.
-- For a submenu reached diagonally: preserve the active parent while the pointer travels inside a **direction-aware safe triangle/polygon** toward the child. Measure pointer position and movement direction; allow a brief grace interval only while trajectory supports submenu intent. Cancel grace when pointer clearly changes direction. See `9.2 and Recipe A.
+- For a submenu reached diagonally: preserve the active parent while the pointer travels inside a **direction-aware safe triangle/polygon** toward the child. Measure pointer position and movement direction; allow a brief grace interval only while trajectory supports submenu intent. Cancel grace when pointer clearly changes direction. See §9.2 and Recipe A.
 - Do not globally delay all hovering to compensate for one nested menu.
 - Ensure submenus work by **keyboard and touch** without relying on a hover corridor.
 - Portals, scroll containers, resizing, moving menus, touch emulation, and right-to-left opening directions must not break pointer intent or dismissal.
