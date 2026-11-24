@@ -1,32 +1,38 @@
-# Skills
+# UI Craft
 
-Reusable, standards-based agent skills and their supporting references.
+A reusable agent skill for designing, auditing and building premium interfaces — with particular attention to microinteractions, accessibility, responsive behavior and reliability.
 
-## Premium UI/UX Craft
+## npm quick start
 
-**[Open the skill](.agents/skills/premium-ui-ux/SKILL.md)** — an actionable workflow for auditing, designing, and implementing premium-feeling interfaces, including pointer intent and safe triangles, keyboard/focus, forms, animations, responsive behavior, performance, recovery, and QA.
+After publication, run `npx @ayshrj/ui-craft` for interactive installation. See [npm installation and release](docs/npm.md) for explicit commands.
 
-**[Read the original playbook](premium_ui_ux_craft_playbook.md)** — the unmodified, long-form source reference.
+## GitHub quick start
 
-### Directory structure
+With Node.js and npm installed, and access to this repository:
 
-```text
-.
-├── premium_ui_ux_craft_playbook.md      # Original reference; preserved unchanged
-└── .agents/
-    └── skills/
-        └── premium-ui-ux/
-            ├── SKILL.md                 # Agent Skills instructions
-            └── references/
-                └── premium-ui-ux-craft-playbook.md  # Full bundled reference
+```sh
+npx skills add ayshrj/ui-craft --skill premium-ui-ux
 ```
 
-### Use the skill
+Select your agent and installation scope when prompted. See [installation](docs/installation.md) for manual setup, private repository access, updates and removal. CLI installation has not yet been smoke-tested against this repository.
 
-- **In this repository:** Open it in a Codex-compatible environment that discovers skills under `.agents/skills/`. Select or invoke **premium-ui-ux** when designing or auditing a UI.
-- **In another repository:** Copy the entire `.agents/skills/premium-ui-ux` directory into that repository's `.agents/skills/` directory. Its bundled reference makes it self-contained.
-- **In other Agent Skills-compatible systems:** Install or point the system to the `premium-ui-ux` directory according to its skill-discovery rules. Not all agents discover the same local paths.
+## Use it
 
-For the format, see [Agent Skills](https://agentskills.io/specification) and [Codex skill authoring](https://learn.chatgpt.com/docs/build-skills).
+Ask your coding agent to use the `premium-ui-ux` skill, for example:
 
-The root playbook and the bundled reference are identical on creation. If you edit the source, update both copies to keep them in sync.
+> Audit this interface for interaction quality, accessibility, responsive behavior and reliability. Prioritize reproducible issues and provide acceptance criteria.
+
+The skill covers pointer intent and safe polygons, keyboard/focus, visual hierarchy, motion, gestures, forms, async feedback, recovery, performance and QA. It prioritizes observable behavior over decorative polish.
+
+- [Skill instructions](skills/premium-ui-ux/SKILL.md)
+- [Full reference](skills/premium-ui-ux/references/premium-ui-ux-craft-playbook.md)
+- [Original playbook](premium_ui_ux_craft_playbook.md)
+- [Example prompts](examples/prompts.md)
+- [Compatibility](docs/compatibility.md)
+
+## Maintenance
+
+The distributable skill lives in `skills/premium-ui-ux/`. The original playbook is preserved unchanged at the root. The bundled reference must match it; run `python3 scripts/validate-skills.py` to check.
+
+See [contributing](CONTRIBUTING.md) and [changelog](CHANGELOG.md). No license has been granted by this repository yet; access does not imply permission to redistribute.
+
