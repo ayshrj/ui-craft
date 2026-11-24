@@ -1,11 +1,13 @@
 # Installation
 
+For npm installation without GitHub access after publication, see [npm installation](npm.md).
+
 ## Skills CLI
 
 Install Node.js/npm, then use the CLI documented at https://github.com/vercel-labs/skills. From the target project:
 
 ```sh
-npx skills add ayshrj/skills --skill premium-ui-ux
+npx skills add ayshrj/ui-craft --skill premium-ui-ux
 ```
 
 For global installation, append `-g`. Use `-a claude-code`, `-a codex`, or `-a cursor` to target an agent. Check `npx skills add --help` for the installed CLI version's options. These commands are documented integration paths, not repository-specific smoke-test results.
@@ -15,10 +17,10 @@ For global installation, append `-g`. Use `-a claude-code`, `-a codex`, or `-a c
 Authenticate GitHub using your normal authorized Git credentials (for example, GitHub CLI browser login), then clone:
 
 ```sh
-git clone https://github.com/ayshrj/skills.git
+git clone https://github.com/ayshrj/ui-craft.git
 ```
 
-If remote CLI installation cannot access the private repository, run `npx skills add ./skills --skill premium-ui-ux` from the directory containing the clone, or use manual installation.
+If remote CLI installation cannot access the private repository, run `npx skills add ./ui-craft --skill premium-ui-ux` from the directory containing the clone, or use manual installation.
 
 Copy the entire `skills/premium-ui-ux` folder **inside the clone**, including references, into your target project's appropriate skill directory:
 
@@ -26,7 +28,7 @@ Copy the entire `skills/premium-ui-ux` folder **inside the clone**, including re
 | --- | --- |
 | Claude Code | .claude/skills/ |
 | Codex | .agents/skills/ |
-| Cursor | .cursor/skills/ |
+| Cursor | .agents/skills/ |
 
 For global discovery consult your agent's current documentation or choose global scope in the CLI. Restart or reload the agent if needed. Never paste passwords or access tokens into prompts or repository files.
 

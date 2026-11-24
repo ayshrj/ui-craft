@@ -2,12 +2,16 @@
 
 A reusable agent skill for designing, auditing and building premium interfaces — with particular attention to microinteractions, accessibility, responsive behavior and reliability.
 
-## Quick start
+## npm quick start
+
+After publication, run `npx @ayshrj/ui-craft` for interactive installation. See [npm installation and release](docs/npm.md) for explicit commands.
+
+## GitHub quick start
 
 With Node.js and npm installed, and access to this repository:
 
 ```sh
-npx skills add ayshrj/skills --skill premium-ui-ux
+npx skills add ayshrj/ui-craft --skill premium-ui-ux
 ```
 
 Select your agent and installation scope when prompted. See [installation](docs/installation.md) for manual setup, private repository access, updates and removal. CLI installation has not yet been smoke-tested against this repository.

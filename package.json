@@ -1,0 +1,39 @@
+{
+  "name": "@ayshrj/ui-craft",
+  "version": "1.0.0",
+  "description": "Agent skill for polished, accessible, reliable interfaces and advanced microinteractions.",
+  "author": "Ayush Raj",
+  "license": "UNLICENSED",
+  "type": "module",
+  "bin": {
+    "ui-craft": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/cli.mjs",
+    "skills/premium-ui-ux/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayshrj/ui-craft.git"
+  },
+  "homepage": "https://github.com/ayshrj/ui-craft",
+  "keywords": [
+    "agent-skills",
+    "ui-ux",
+    "codex",
+    "claude-code",
+    "cursor",
+    "accessibility",
+    "frontend"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
